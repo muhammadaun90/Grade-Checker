@@ -1,10 +1,11 @@
 // Retrieving HTML Elements from the DOM
 function submit(){
 const marks = document.getElementById('marks').value;
-const gradeA1 = "Your gpa : 4  and Grade is A+ Exceptional";
+const gradeA1 = "Your gpa : 4  and Grade is A+ Perfect";
 const gradeA  = "Your gpa : 4  and Grade is A Excellent";
 const gradeB  = "Your gpa : 3  and Grade is B Good";
-const gradeC = "Your gpa : 2.5  and Grade is C Adequate";
+const gradeC = "Your gpa : 2.5  and Grade is C Satisfactory";
+const gradeD = "Your gpa : 2 and Grade is D Not Satisfactory";
 const gradeF = "Your gpa : 0  and Grade is F Failure";
 const invalid = "Invalid Entry!";
     if (marks <= 100 && marks >=90) {
@@ -20,6 +21,9 @@ const invalid = "Invalid Entry!";
         document.getElementById("result").innerHTML = gradeC;
     }
     else if (marks <= 59 && marks >=50) {
+        document.getElementById("result").innerHTML = gradeD;
+    }
+    else if (marks < 50) {
         document.getElementById("result").innerHTML = gradeF;
     }
     else {
